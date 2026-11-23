@@ -4,7 +4,7 @@
     "sourceName": "🔞玉兔资源",
     "sourceIcon": "",
     "sourceGroup": "影视资源",
-    "sourceComment": "订阅版（v2）：通用网页抓取，不做 XML 解析，所以不会再报「rss获取内容失败」",
+    "sourceComment": "订阅版（v3）：网页规则解析，点开有正文就抓正文，抓不到就显示提示，不再报解析错误",
     "enabled": true,
     "enabledCookieJar": true,
     "singleUrl": false,
@@ -18,8 +18,8 @@
     "ruleDescription": "text",
     "ruleImage": "",
     "ruleLink": "href",
-    "ruleContent": "",
-    "lastUpdateTime": 1795451686063,
+    "ruleContent": "@js:\nvar out = '';\ntry {\n  var raw = String(result || '');\n  var body = raw\n    .replace(/<script[\\s\\S]*?<\\/script>/gi, ' ')\n    .replace(/<style[\\s\\S]*?<\\/style>/gi, ' ')\n    .replace(/<!--[\\s\\S]*?-->/g, ' ')\n    .replace(/<br\\s*\\/?>/gi, '\\n')\n    .replace(/<\\/(p|div|li|h[1-6]|tr|td)>/gi, '\\n')\n    .replace(/<[^>]+>/g, '');\n  body = body\n    .replace(/&nbsp;/g, ' ')\n    .replace(/&amp;/g, '&')\n    .replace(/&lt;/g, '<')\n    .replace(/&gt;/g, '>')\n    .replace(/&quot;/g, '\"')\n    .replace(/[ \\t\\u3000]+/g, ' ')\n    .replace(/\\n\\s*\\n\\s*\\n+/g, '\\n\\n')\n    .trim();\n  if (body.length > 12000) body = body.substring(0, 12000);\n  if (body.length > 20) {\n    var lines = body.split('\\n');\n    var parts = [];\n    for (var i = 0; i < lines.length; i++) {\n      var t = String(lines[i]).trim();\n      if (t.length > 0) parts.push('<p>' + t + '</p>');\n    }\n    if (parts.length > 0) out = parts.join('');\n  }\n} catch (e) {}\nif (!out) {\n  out = '<p>这个站只提供资源接口，页面里没有可直接抓取的正文。</p><p>想看原网页可以点右上角菜单里的「浏览器打开」。</p>';\n}\nout;",
+    "lastUpdateTime": 1795480800000,
     "customOrder": 0
   },
   {
@@ -27,7 +27,7 @@
     "sourceName": "🔞番号资源",
     "sourceIcon": "",
     "sourceGroup": "影视资源",
-    "sourceComment": "订阅版（v2）：通用网页抓取，不做 XML 解析，所以不会再报「rss获取内容失败」",
+    "sourceComment": "订阅版（v3）：网页规则解析，点开有正文就抓正文，抓不到就显示提示，不再报解析错误",
     "enabled": true,
     "enabledCookieJar": true,
     "singleUrl": false,
@@ -41,8 +41,8 @@
     "ruleDescription": "text",
     "ruleImage": "",
     "ruleLink": "href",
-    "ruleContent": "",
-    "lastUpdateTime": 1795451686063,
+    "ruleContent": "@js:\nvar out = '';\ntry {\n  var raw = String(result || '');\n  var body = raw\n    .replace(/<script[\\s\\S]*?<\\/script>/gi, ' ')\n    .replace(/<style[\\s\\S]*?<\\/style>/gi, ' ')\n    .replace(/<!--[\\s\\S]*?-->/g, ' ')\n    .replace(/<br\\s*\\/?>/gi, '\\n')\n    .replace(/<\\/(p|div|li|h[1-6]|tr|td)>/gi, '\\n')\n    .replace(/<[^>]+>/g, '');\n  body = body\n    .replace(/&nbsp;/g, ' ')\n    .replace(/&amp;/g, '&')\n    .replace(/&lt;/g, '<')\n    .replace(/&gt;/g, '>')\n    .replace(/&quot;/g, '\"')\n    .replace(/[ \\t\\u3000]+/g, ' ')\n    .replace(/\\n\\s*\\n\\s*\\n+/g, '\\n\\n')\n    .trim();\n  if (body.length > 12000) body = body.substring(0, 12000);\n  if (body.length > 20) {\n    var lines = body.split('\\n');\n    var parts = [];\n    for (var i = 0; i < lines.length; i++) {\n      var t = String(lines[i]).trim();\n      if (t.length > 0) parts.push('<p>' + t + '</p>');\n    }\n    if (parts.length > 0) out = parts.join('');\n  }\n} catch (e) {}\nif (!out) {\n  out = '<p>这个站只提供资源接口，页面里没有可直接抓取的正文。</p><p>想看原网页可以点右上角菜单里的「浏览器打开」。</p>';\n}\nout;",
+    "lastUpdateTime": 1795480800000,
     "customOrder": 1
   },
   {
@@ -50,7 +50,7 @@
     "sourceName": "🔞老色逼资源",
     "sourceIcon": "",
     "sourceGroup": "影视资源",
-    "sourceComment": "订阅版（v2）：通用网页抓取，不做 XML 解析，所以不会再报「rss获取内容失败」",
+    "sourceComment": "订阅版（v3）：网页规则解析，点开有正文就抓正文，抓不到就显示提示，不再报解析错误",
     "enabled": true,
     "enabledCookieJar": true,
     "singleUrl": false,
@@ -64,8 +64,8 @@
     "ruleDescription": "text",
     "ruleImage": "",
     "ruleLink": "href",
-    "ruleContent": "",
-    "lastUpdateTime": 1795451686063,
+    "ruleContent": "@js:\nvar out = '';\ntry {\n  var raw = String(result || '');\n  var body = raw\n    .replace(/<script[\\s\\S]*?<\\/script>/gi, ' ')\n    .replace(/<style[\\s\\S]*?<\\/style>/gi, ' ')\n    .replace(/<!--[\\s\\S]*?-->/g, ' ')\n    .replace(/<br\\s*\\/?>/gi, '\\n')\n    .replace(/<\\/(p|div|li|h[1-6]|tr|td)>/gi, '\\n')\n    .replace(/<[^>]+>/g, '');\n  body = body\n    .replace(/&nbsp;/g, ' ')\n    .replace(/&amp;/g, '&')\n    .replace(/&lt;/g, '<')\n    .replace(/&gt;/g, '>')\n    .replace(/&quot;/g, '\"')\n    .replace(/[ \\t\\u3000]+/g, ' ')\n    .replace(/\\n\\s*\\n\\s*\\n+/g, '\\n\\n')\n    .trim();\n  if (body.length > 12000) body = body.substring(0, 12000);\n  if (body.length > 20) {\n    var lines = body.split('\\n');\n    var parts = [];\n    for (var i = 0; i < lines.length; i++) {\n      var t = String(lines[i]).trim();\n      if (t.length > 0) parts.push('<p>' + t + '</p>');\n    }\n    if (parts.length > 0) out = parts.join('');\n  }\n} catch (e) {}\nif (!out) {\n  out = '<p>这个站只提供资源接口，页面里没有可直接抓取的正文。</p><p>想看原网页可以点右上角菜单里的「浏览器打开」。</p>';\n}\nout;",
+    "lastUpdateTime": 1795480800000,
     "customOrder": 2
   },
   {
@@ -73,7 +73,7 @@
     "sourceName": "🔞大奶子资源",
     "sourceIcon": "",
     "sourceGroup": "影视资源",
-    "sourceComment": "订阅版（v2）：通用网页抓取，不做 XML 解析，所以不会再报「rss获取内容失败」",
+    "sourceComment": "订阅版（v3）：网页规则解析，点开有正文就抓正文，抓不到就显示提示，不再报解析错误",
     "enabled": true,
     "enabledCookieJar": true,
     "singleUrl": false,
@@ -87,8 +87,8 @@
     "ruleDescription": "text",
     "ruleImage": "",
     "ruleLink": "href",
-    "ruleContent": "",
-    "lastUpdateTime": 1795451686063,
+    "ruleContent": "@js:\nvar out = '';\ntry {\n  var raw = String(result || '');\n  var body = raw\n    .replace(/<script[\\s\\S]*?<\\/script>/gi, ' ')\n    .replace(/<style[\\s\\S]*?<\\/style>/gi, ' ')\n    .replace(/<!--[\\s\\S]*?-->/g, ' ')\n    .replace(/<br\\s*\\/?>/gi, '\\n')\n    .replace(/<\\/(p|div|li|h[1-6]|tr|td)>/gi, '\\n')\n    .replace(/<[^>]+>/g, '');\n  body = body\n    .replace(/&nbsp;/g, ' ')\n    .replace(/&amp;/g, '&')\n    .replace(/&lt;/g, '<')\n    .replace(/&gt;/g, '>')\n    .replace(/&quot;/g, '\"')\n    .replace(/[ \\t\\u3000]+/g, ' ')\n    .replace(/\\n\\s*\\n\\s*\\n+/g, '\\n\\n')\n    .trim();\n  if (body.length > 12000) body = body.substring(0, 12000);\n  if (body.length > 20) {\n    var lines = body.split('\\n');\n    var parts = [];\n    for (var i = 0; i < lines.length; i++) {\n      var t = String(lines[i]).trim();\n      if (t.length > 0) parts.push('<p>' + t + '</p>');\n    }\n    if (parts.length > 0) out = parts.join('');\n  }\n} catch (e) {}\nif (!out) {\n  out = '<p>这个站只提供资源接口，页面里没有可直接抓取的正文。</p><p>想看原网页可以点右上角菜单里的「浏览器打开」。</p>';\n}\nout;",
+    "lastUpdateTime": 1795480800000,
     "customOrder": 3
   },
   {
@@ -96,7 +96,7 @@
     "sourceName": "🔞乐播资源",
     "sourceIcon": "",
     "sourceGroup": "影视资源",
-    "sourceComment": "订阅版（v2）：通用网页抓取，不做 XML 解析，所以不会再报「rss获取内容失败」",
+    "sourceComment": "订阅版（v3）：网页规则解析，点开有正文就抓正文，抓不到就显示提示，不再报解析错误",
     "enabled": true,
     "enabledCookieJar": true,
     "singleUrl": false,
@@ -110,8 +110,8 @@
     "ruleDescription": "text",
     "ruleImage": "",
     "ruleLink": "href",
-    "ruleContent": "",
-    "lastUpdateTime": 1795451686063,
+    "ruleContent": "@js:\nvar out = '';\ntry {\n  var raw = String(result || '');\n  var body = raw\n    .replace(/<script[\\s\\S]*?<\\/script>/gi, ' ')\n    .replace(/<style[\\s\\S]*?<\\/style>/gi, ' ')\n    .replace(/<!--[\\s\\S]*?-->/g, ' ')\n    .replace(/<br\\s*\\/?>/gi, '\\n')\n    .replace(/<\\/(p|div|li|h[1-6]|tr|td)>/gi, '\\n')\n    .replace(/<[^>]+>/g, '');\n  body = body\n    .replace(/&nbsp;/g, ' ')\n    .replace(/&amp;/g, '&')\n    .replace(/&lt;/g, '<')\n    .replace(/&gt;/g, '>')\n    .replace(/&quot;/g, '\"')\n    .replace(/[ \\t\\u3000]+/g, ' ')\n    .replace(/\\n\\s*\\n\\s*\\n+/g, '\\n\\n')\n    .trim();\n  if (body.length > 12000) body = body.substring(0, 12000);\n  if (body.length > 20) {\n    var lines = body.split('\\n');\n    var parts = [];\n    for (var i = 0; i < lines.length; i++) {\n      var t = String(lines[i]).trim();\n      if (t.length > 0) parts.push('<p>' + t + '</p>');\n    }\n    if (parts.length > 0) out = parts.join('');\n  }\n} catch (e) {}\nif (!out) {\n  out = '<p>这个站只提供资源接口，页面里没有可直接抓取的正文。</p><p>想看原网页可以点右上角菜单里的「浏览器打开」。</p>';\n}\nout;",
+    "lastUpdateTime": 1795480800000,
     "customOrder": 4
   },
   {
@@ -119,7 +119,7 @@
     "sourceName": "🔞豆豆资源",
     "sourceIcon": "",
     "sourceGroup": "影视资源",
-    "sourceComment": "订阅版（v2）：通用网页抓取，不做 XML 解析，所以不会再报「rss获取内容失败」",
+    "sourceComment": "订阅版（v3）：网页规则解析，点开有正文就抓正文，抓不到就显示提示，不再报解析错误",
     "enabled": true,
     "enabledCookieJar": true,
     "singleUrl": false,
@@ -133,8 +133,8 @@
     "ruleDescription": "text",
     "ruleImage": "",
     "ruleLink": "href",
-    "ruleContent": "",
-    "lastUpdateTime": 1795451686063,
+    "ruleContent": "@js:\nvar out = '';\ntry {\n  var raw = String(result || '');\n  var body = raw\n    .replace(/<script[\\s\\S]*?<\\/script>/gi, ' ')\n    .replace(/<style[\\s\\S]*?<\\/style>/gi, ' ')\n    .replace(/<!--[\\s\\S]*?-->/g, ' ')\n    .replace(/<br\\s*\\/?>/gi, '\\n')\n    .replace(/<\\/(p|div|li|h[1-6]|tr|td)>/gi, '\\n')\n    .replace(/<[^>]+>/g, '');\n  body = body\n    .replace(/&nbsp;/g, ' ')\n    .replace(/&amp;/g, '&')\n    .replace(/&lt;/g, '<')\n    .replace(/&gt;/g, '>')\n    .replace(/&quot;/g, '\"')\n    .replace(/[ \\t\\u3000]+/g, ' ')\n    .replace(/\\n\\s*\\n\\s*\\n+/g, '\\n\\n')\n    .trim();\n  if (body.length > 12000) body = body.substring(0, 12000);\n  if (body.length > 20) {\n    var lines = body.split('\\n');\n    var parts = [];\n    for (var i = 0; i < lines.length; i++) {\n      var t = String(lines[i]).trim();\n      if (t.length > 0) parts.push('<p>' + t + '</p>');\n    }\n    if (parts.length > 0) out = parts.join('');\n  }\n} catch (e) {}\nif (!out) {\n  out = '<p>这个站只提供资源接口，页面里没有可直接抓取的正文。</p><p>想看原网页可以点右上角菜单里的「浏览器打开」。</p>';\n}\nout;",
+    "lastUpdateTime": 1795480800000,
     "customOrder": 5
   },
   {
@@ -142,7 +142,7 @@
     "sourceName": "🔞滴滴资源",
     "sourceIcon": "",
     "sourceGroup": "影视资源",
-    "sourceComment": "订阅版（v2）：通用网页抓取，不做 XML 解析，所以不会再报「rss获取内容失败」",
+    "sourceComment": "订阅版（v3）：网页规则解析，点开有正文就抓正文，抓不到就显示提示，不再报解析错误",
     "enabled": true,
     "enabledCookieJar": true,
     "singleUrl": false,
@@ -156,8 +156,8 @@
     "ruleDescription": "text",
     "ruleImage": "",
     "ruleLink": "href",
-    "ruleContent": "",
-    "lastUpdateTime": 1795451686063,
+    "ruleContent": "@js:\nvar out = '';\ntry {\n  var raw = String(result || '');\n  var body = raw\n    .replace(/<script[\\s\\S]*?<\\/script>/gi, ' ')\n    .replace(/<style[\\s\\S]*?<\\/style>/gi, ' ')\n    .replace(/<!--[\\s\\S]*?-->/g, ' ')\n    .replace(/<br\\s*\\/?>/gi, '\\n')\n    .replace(/<\\/(p|div|li|h[1-6]|tr|td)>/gi, '\\n')\n    .replace(/<[^>]+>/g, '');\n  body = body\n    .replace(/&nbsp;/g, ' ')\n    .replace(/&amp;/g, '&')\n    .replace(/&lt;/g, '<')\n    .replace(/&gt;/g, '>')\n    .replace(/&quot;/g, '\"')\n    .replace(/[ \\t\\u3000]+/g, ' ')\n    .replace(/\\n\\s*\\n\\s*\\n+/g, '\\n\\n')\n    .trim();\n  if (body.length > 12000) body = body.substring(0, 12000);\n  if (body.length > 20) {\n    var lines = body.split('\\n');\n    var parts = [];\n    for (var i = 0; i < lines.length; i++) {\n      var t = String(lines[i]).trim();\n      if (t.length > 0) parts.push('<p>' + t + '</p>');\n    }\n    if (parts.length > 0) out = parts.join('');\n  }\n} catch (e) {}\nif (!out) {\n  out = '<p>这个站只提供资源接口，页面里没有可直接抓取的正文。</p><p>想看原网页可以点右上角菜单里的「浏览器打开」。</p>';\n}\nout;",
+    "lastUpdateTime": 1795480800000,
     "customOrder": 6
   },
   {
@@ -165,7 +165,7 @@
     "sourceName": "🔞黑料资源",
     "sourceIcon": "",
     "sourceGroup": "影视资源",
-    "sourceComment": "订阅版（v2）：通用网页抓取，不做 XML 解析，所以不会再报「rss获取内容失败」",
+    "sourceComment": "订阅版（v3）：网页规则解析，点开有正文就抓正文，抓不到就显示提示，不再报解析错误",
     "enabled": true,
     "enabledCookieJar": true,
     "singleUrl": false,
@@ -179,8 +179,8 @@
     "ruleDescription": "text",
     "ruleImage": "",
     "ruleLink": "href",
-    "ruleContent": "",
-    "lastUpdateTime": 1795451686063,
+    "ruleContent": "@js:\nvar out = '';\ntry {\n  var raw = String(result || '');\n  var body = raw\n    .replace(/<script[\\s\\S]*?<\\/script>/gi, ' ')\n    .replace(/<style[\\s\\S]*?<\\/style>/gi, ' ')\n    .replace(/<!--[\\s\\S]*?-->/g, ' ')\n    .replace(/<br\\s*\\/?>/gi, '\\n')\n    .replace(/<\\/(p|div|li|h[1-6]|tr|td)>/gi, '\\n')\n    .replace(/<[^>]+>/g, '');\n  body = body\n    .replace(/&nbsp;/g, ' ')\n    .replace(/&amp;/g, '&')\n    .replace(/&lt;/g, '<')\n    .replace(/&gt;/g, '>')\n    .replace(/&quot;/g, '\"')\n    .replace(/[ \\t\\u3000]+/g, ' ')\n    .replace(/\\n\\s*\\n\\s*\\n+/g, '\\n\\n')\n    .trim();\n  if (body.length > 12000) body = body.substring(0, 12000);\n  if (body.length > 20) {\n    var lines = body.split('\\n');\n    var parts = [];\n    for (var i = 0; i < lines.length; i++) {\n      var t = String(lines[i]).trim();\n      if (t.length > 0) parts.push('<p>' + t + '</p>');\n    }\n    if (parts.length > 0) out = parts.join('');\n  }\n} catch (e) {}\nif (!out) {\n  out = '<p>这个站只提供资源接口，页面里没有可直接抓取的正文。</p><p>想看原网页可以点右上角菜单里的「浏览器打开」。</p>';\n}\nout;",
+    "lastUpdateTime": 1795480800000,
     "customOrder": 7
   },
   {
@@ -188,7 +188,7 @@
     "sourceName": "🔞CK资源",
     "sourceIcon": "",
     "sourceGroup": "影视资源",
-    "sourceComment": "订阅版（v2）：通用网页抓取，不做 XML 解析，所以不会再报「rss获取内容失败」",
+    "sourceComment": "订阅版（v3）：网页规则解析，点开有正文就抓正文，抓不到就显示提示，不再报解析错误",
     "enabled": true,
     "enabledCookieJar": true,
     "singleUrl": false,
@@ -202,8 +202,8 @@
     "ruleDescription": "text",
     "ruleImage": "",
     "ruleLink": "href",
-    "ruleContent": "",
-    "lastUpdateTime": 1795451686063,
+    "ruleContent": "@js:\nvar out = '';\ntry {\n  var raw = String(result || '');\n  var body = raw\n    .replace(/<script[\\s\\S]*?<\\/script>/gi, ' ')\n    .replace(/<style[\\s\\S]*?<\\/style>/gi, ' ')\n    .replace(/<!--[\\s\\S]*?-->/g, ' ')\n    .replace(/<br\\s*\\/?>/gi, '\\n')\n    .replace(/<\\/(p|div|li|h[1-6]|tr|td)>/gi, '\\n')\n    .replace(/<[^>]+>/g, '');\n  body = body\n    .replace(/&nbsp;/g, ' ')\n    .replace(/&amp;/g, '&')\n    .replace(/&lt;/g, '<')\n    .replace(/&gt;/g, '>')\n    .replace(/&quot;/g, '\"')\n    .replace(/[ \\t\\u3000]+/g, ' ')\n    .replace(/\\n\\s*\\n\\s*\\n+/g, '\\n\\n')\n    .trim();\n  if (body.length > 12000) body = body.substring(0, 12000);\n  if (body.length > 20) {\n    var lines = body.split('\\n');\n    var parts = [];\n    for (var i = 0; i < lines.length; i++) {\n      var t = String(lines[i]).trim();\n      if (t.length > 0) parts.push('<p>' + t + '</p>');\n    }\n    if (parts.length > 0) out = parts.join('');\n  }\n} catch (e) {}\nif (!out) {\n  out = '<p>这个站只提供资源接口，页面里没有可直接抓取的正文。</p><p>想看原网页可以点右上角菜单里的「浏览器打开」。</p>';\n}\nout;",
+    "lastUpdateTime": 1795480800000,
     "customOrder": 8
   },
   {
@@ -211,7 +211,7 @@
     "sourceName": "🔞白嫖资源",
     "sourceIcon": "",
     "sourceGroup": "影视资源",
-    "sourceComment": "订阅版（v2）：通用网页抓取，不做 XML 解析，所以不会再报「rss获取内容失败」",
+    "sourceComment": "订阅版（v3）：网页规则解析，点开有正文就抓正文，抓不到就显示提示，不再报解析错误",
     "enabled": true,
     "enabledCookieJar": true,
     "singleUrl": false,
@@ -225,8 +225,8 @@
     "ruleDescription": "text",
     "ruleImage": "",
     "ruleLink": "href",
-    "ruleContent": "",
-    "lastUpdateTime": 1795451686063,
+    "ruleContent": "@js:\nvar out = '';\ntry {\n  var raw = String(result || '');\n  var body = raw\n    .replace(/<script[\\s\\S]*?<\\/script>/gi, ' ')\n    .replace(/<style[\\s\\S]*?<\\/style>/gi, ' ')\n    .replace(/<!--[\\s\\S]*?-->/g, ' ')\n    .replace(/<br\\s*\\/?>/gi, '\\n')\n    .replace(/<\\/(p|div|li|h[1-6]|tr|td)>/gi, '\\n')\n    .replace(/<[^>]+>/g, '');\n  body = body\n    .replace(/&nbsp;/g, ' ')\n    .replace(/&amp;/g, '&')\n    .replace(/&lt;/g, '<')\n    .replace(/&gt;/g, '>')\n    .replace(/&quot;/g, '\"')\n    .replace(/[ \\t\\u3000]+/g, ' ')\n    .replace(/\\n\\s*\\n\\s*\\n+/g, '\\n\\n')\n    .trim();\n  if (body.length > 12000) body = body.substring(0, 12000);\n  if (body.length > 20) {\n    var lines = body.split('\\n');\n    var parts = [];\n    for (var i = 0; i < lines.length; i++) {\n      var t = String(lines[i]).trim();\n      if (t.length > 0) parts.push('<p>' + t + '</p>');\n    }\n    if (parts.length > 0) out = parts.join('');\n  }\n} catch (e) {}\nif (!out) {\n  out = '<p>这个站只提供资源接口，页面里没有可直接抓取的正文。</p><p>想看原网页可以点右上角菜单里的「浏览器打开」。</p>';\n}\nout;",
+    "lastUpdateTime": 1795480800000,
     "customOrder": 9
   },
   {
@@ -234,7 +234,7 @@
     "sourceName": "🔞杏吧资源",
     "sourceIcon": "",
     "sourceGroup": "影视资源",
-    "sourceComment": "订阅版（v2）：通用网页抓取，不做 XML 解析，所以不会再报「rss获取内容失败」",
+    "sourceComment": "订阅版（v3）：网页规则解析，点开有正文就抓正文，抓不到就显示提示，不再报解析错误",
     "enabled": true,
     "enabledCookieJar": true,
     "singleUrl": false,
@@ -248,8 +248,8 @@
     "ruleDescription": "text",
     "ruleImage": "",
     "ruleLink": "href",
-    "ruleContent": "",
-    "lastUpdateTime": 1795451686063,
+    "ruleContent": "@js:\nvar out = '';\ntry {\n  var raw = String(result || '');\n  var body = raw\n    .replace(/<script[\\s\\S]*?<\\/script>/gi, ' ')\n    .replace(/<style[\\s\\S]*?<\\/style>/gi, ' ')\n    .replace(/<!--[\\s\\S]*?-->/g, ' ')\n    .replace(/<br\\s*\\/?>/gi, '\\n')\n    .replace(/<\\/(p|div|li|h[1-6]|tr|td)>/gi, '\\n')\n    .replace(/<[^>]+>/g, '');\n  body = body\n    .replace(/&nbsp;/g, ' ')\n    .replace(/&amp;/g, '&')\n    .replace(/&lt;/g, '<')\n    .replace(/&gt;/g, '>')\n    .replace(/&quot;/g, '\"')\n    .replace(/[ \\t\\u3000]+/g, ' ')\n    .replace(/\\n\\s*\\n\\s*\\n+/g, '\\n\\n')\n    .trim();\n  if (body.length > 12000) body = body.substring(0, 12000);\n  if (body.length > 20) {\n    var lines = body.split('\\n');\n    var parts = [];\n    for (var i = 0; i < lines.length; i++) {\n      var t = String(lines[i]).trim();\n      if (t.length > 0) parts.push('<p>' + t + '</p>');\n    }\n    if (parts.length > 0) out = parts.join('');\n  }\n} catch (e) {}\nif (!out) {\n  out = '<p>这个站只提供资源接口，页面里没有可直接抓取的正文。</p><p>想看原网页可以点右上角菜单里的「浏览器打开」。</p>';\n}\nout;",
+    "lastUpdateTime": 1795480800000,
     "customOrder": 10
   },
   {
@@ -257,7 +257,7 @@
     "sourceName": "🔞极品资源",
     "sourceIcon": "",
     "sourceGroup": "影视资源",
-    "sourceComment": "订阅版（v2）：通用网页抓取，不做 XML 解析，所以不会再报「rss获取内容失败」",
+    "sourceComment": "订阅版（v3）：网页规则解析，点开有正文就抓正文，抓不到就显示提示，不再报解析错误",
     "enabled": true,
     "enabledCookieJar": true,
     "singleUrl": false,
@@ -271,8 +271,8 @@
     "ruleDescription": "text",
     "ruleImage": "",
     "ruleLink": "href",
-    "ruleContent": "",
-    "lastUpdateTime": 1795451686063,
+    "ruleContent": "@js:\nvar out = '';\ntry {\n  var raw = String(result || '');\n  var body = raw\n    .replace(/<script[\\s\\S]*?<\\/script>/gi, ' ')\n    .replace(/<style[\\s\\S]*?<\\/style>/gi, ' ')\n    .replace(/<!--[\\s\\S]*?-->/g, ' ')\n    .replace(/<br\\s*\\/?>/gi, '\\n')\n    .replace(/<\\/(p|div|li|h[1-6]|tr|td)>/gi, '\\n')\n    .replace(/<[^>]+>/g, '');\n  body = body\n    .replace(/&nbsp;/g, ' ')\n    .replace(/&amp;/g, '&')\n    .replace(/&lt;/g, '<')\n    .replace(/&gt;/g, '>')\n    .replace(/&quot;/g, '\"')\n    .replace(/[ \\t\\u3000]+/g, ' ')\n    .replace(/\\n\\s*\\n\\s*\\n+/g, '\\n\\n')\n    .trim();\n  if (body.length > 12000) body = body.substring(0, 12000);\n  if (body.length > 20) {\n    var lines = body.split('\\n');\n    var parts = [];\n    for (var i = 0; i < lines.length; i++) {\n      var t = String(lines[i]).trim();\n      if (t.length > 0) parts.push('<p>' + t + '</p>');\n    }\n    if (parts.length > 0) out = parts.join('');\n  }\n} catch (e) {}\nif (!out) {\n  out = '<p>这个站只提供资源接口，页面里没有可直接抓取的正文。</p><p>想看原网页可以点右上角菜单里的「浏览器打开」。</p>';\n}\nout;",
+    "lastUpdateTime": 1795480800000,
     "customOrder": 11
   },
   {
@@ -280,7 +280,7 @@
     "sourceName": "🔞黑料资源站",
     "sourceIcon": "",
     "sourceGroup": "影视资源",
-    "sourceComment": "订阅版（v2）：通用网页抓取，不做 XML 解析，所以不会再报「rss获取内容失败」",
+    "sourceComment": "订阅版（v3）：网页规则解析，点开有正文就抓正文，抓不到就显示提示，不再报解析错误",
     "enabled": true,
     "enabledCookieJar": true,
     "singleUrl": false,
@@ -294,8 +294,8 @@
     "ruleDescription": "text",
     "ruleImage": "",
     "ruleLink": "href",
-    "ruleContent": "",
-    "lastUpdateTime": 1795451686063,
+    "ruleContent": "@js:\nvar out = '';\ntry {\n  var raw = String(result || '');\n  var body = raw\n    .replace(/<script[\\s\\S]*?<\\/script>/gi, ' ')\n    .replace(/<style[\\s\\S]*?<\\/style>/gi, ' ')\n    .replace(/<!--[\\s\\S]*?-->/g, ' ')\n    .replace(/<br\\s*\\/?>/gi, '\\n')\n    .replace(/<\\/(p|div|li|h[1-6]|tr|td)>/gi, '\\n')\n    .replace(/<[^>]+>/g, '');\n  body = body\n    .replace(/&nbsp;/g, ' ')\n    .replace(/&amp;/g, '&')\n    .replace(/&lt;/g, '<')\n    .replace(/&gt;/g, '>')\n    .replace(/&quot;/g, '\"')\n    .replace(/[ \\t\\u3000]+/g, ' ')\n    .replace(/\\n\\s*\\n\\s*\\n+/g, '\\n\\n')\n    .trim();\n  if (body.length > 12000) body = body.substring(0, 12000);\n  if (body.length > 20) {\n    var lines = body.split('\\n');\n    var parts = [];\n    for (var i = 0; i < lines.length; i++) {\n      var t = String(lines[i]).trim();\n      if (t.length > 0) parts.push('<p>' + t + '</p>');\n    }\n    if (parts.length > 0) out = parts.join('');\n  }\n} catch (e) {}\nif (!out) {\n  out = '<p>这个站只提供资源接口，页面里没有可直接抓取的正文。</p><p>想看原网页可以点右上角菜单里的「浏览器打开」。</p>';\n}\nout;",
+    "lastUpdateTime": 1795480800000,
     "customOrder": 12
   },
   {
@@ -303,7 +303,7 @@
     "sourceName": "🔞大地资源",
     "sourceIcon": "",
     "sourceGroup": "影视资源",
-    "sourceComment": "订阅版（v2）：通用网页抓取，不做 XML 解析，所以不会再报「rss获取内容失败」",
+    "sourceComment": "订阅版（v3）：网页规则解析，点开有正文就抓正文，抓不到就显示提示，不再报解析错误",
     "enabled": true,
     "enabledCookieJar": true,
     "singleUrl": false,
@@ -317,8 +317,8 @@
     "ruleDescription": "text",
     "ruleImage": "",
     "ruleLink": "href",
-    "ruleContent": "",
-    "lastUpdateTime": 1795451686063,
+    "ruleContent": "@js:\nvar out = '';\ntry {\n  var raw = String(result || '');\n  var body = raw\n    .replace(/<script[\\s\\S]*?<\\/script>/gi, ' ')\n    .replace(/<style[\\s\\S]*?<\\/style>/gi, ' ')\n    .replace(/<!--[\\s\\S]*?-->/g, ' ')\n    .replace(/<br\\s*\\/?>/gi, '\\n')\n    .replace(/<\\/(p|div|li|h[1-6]|tr|td)>/gi, '\\n')\n    .replace(/<[^>]+>/g, '');\n  body = body\n    .replace(/&nbsp;/g, ' ')\n    .replace(/&amp;/g, '&')\n    .replace(/&lt;/g, '<')\n    .replace(/&gt;/g, '>')\n    .replace(/&quot;/g, '\"')\n    .replace(/[ \\t\\u3000]+/g, ' ')\n    .replace(/\\n\\s*\\n\\s*\\n+/g, '\\n\\n')\n    .trim();\n  if (body.length > 12000) body = body.substring(0, 12000);\n  if (body.length > 20) {\n    var lines = body.split('\\n');\n    var parts = [];\n    for (var i = 0; i < lines.length; i++) {\n      var t = String(lines[i]).trim();\n      if (t.length > 0) parts.push('<p>' + t + '</p>');\n    }\n    if (parts.length > 0) out = parts.join('');\n  }\n} catch (e) {}\nif (!out) {\n  out = '<p>这个站只提供资源接口，页面里没有可直接抓取的正文。</p><p>想看原网页可以点右上角菜单里的「浏览器打开」。</p>';\n}\nout;",
+    "lastUpdateTime": 1795480800000,
     "customOrder": 13
   },
   {
@@ -326,7 +326,7 @@
     "sourceName": "🔞155资源站",
     "sourceIcon": "",
     "sourceGroup": "影视资源",
-    "sourceComment": "订阅版（v2）：通用网页抓取，不做 XML 解析，所以不会再报「rss获取内容失败」",
+    "sourceComment": "订阅版（v3）：网页规则解析，点开有正文就抓正文，抓不到就显示提示，不再报解析错误",
     "enabled": true,
     "enabledCookieJar": true,
     "singleUrl": false,
@@ -340,8 +340,8 @@
     "ruleDescription": "text",
     "ruleImage": "",
     "ruleLink": "href",
-    "ruleContent": "",
-    "lastUpdateTime": 1795451686063,
+    "ruleContent": "@js:\nvar out = '';\ntry {\n  var raw = String(result || '');\n  var body = raw\n    .replace(/<script[\\s\\S]*?<\\/script>/gi, ' ')\n    .replace(/<style[\\s\\S]*?<\\/style>/gi, ' ')\n    .replace(/<!--[\\s\\S]*?-->/g, ' ')\n    .replace(/<br\\s*\\/?>/gi, '\\n')\n    .replace(/<\\/(p|div|li|h[1-6]|tr|td)>/gi, '\\n')\n    .replace(/<[^>]+>/g, '');\n  body = body\n    .replace(/&nbsp;/g, ' ')\n    .replace(/&amp;/g, '&')\n    .replace(/&lt;/g, '<')\n    .replace(/&gt;/g, '>')\n    .replace(/&quot;/g, '\"')\n    .replace(/[ \\t\\u3000]+/g, ' ')\n    .replace(/\\n\\s*\\n\\s*\\n+/g, '\\n\\n')\n    .trim();\n  if (body.length > 12000) body = body.substring(0, 12000);\n  if (body.length > 20) {\n    var lines = body.split('\\n');\n    var parts = [];\n    for (var i = 0; i < lines.length; i++) {\n      var t = String(lines[i]).trim();\n      if (t.length > 0) parts.push('<p>' + t + '</p>');\n    }\n    if (parts.length > 0) out = parts.join('');\n  }\n} catch (e) {}\nif (!out) {\n  out = '<p>这个站只提供资源接口，页面里没有可直接抓取的正文。</p><p>想看原网页可以点右上角菜单里的「浏览器打开」。</p>';\n}\nout;",
+    "lastUpdateTime": 1795480800000,
     "customOrder": 14
   }
 ]
