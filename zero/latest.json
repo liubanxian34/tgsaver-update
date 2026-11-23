@@ -1,8 +1,8 @@
 {
-  "version": "0.9",
-  "code": 9,
-  "tag": "v0.9-reader",
-  "apk": "https://github.com/liubanxian34/tgsaver-update/releases/download/v0.9-reader/zero-reader.apk",
-  "page": "https://github.com/liubanxian34/tgsaver-update/releases/tag/v0.9-reader",
-  "notes": "零号阅读 0.9"
+  "version": "0.10",
+  "code": 10,
+  "tag": "v0.10-reader",
+  "apk": "https://github.com/liubanxian34/tgsaver-update/releases/download/v0.10-reader/zero-reader.apk",
+  "page": "https://github.com/liubanxian34/tgsaver-update/releases/tag/v0.10-reader",
+  "notes": "零号阅读 0.10"
 }
