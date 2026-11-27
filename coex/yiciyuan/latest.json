@@ -1,8 +1,8 @@
 {
-  "version": "2.4.2",
-  "code": 112,
-  "tag": "coex-v1",
-  "apk": "https://github.com/liubanxian34/tgsaver-update/releases/download/coex-v1/zero-yiciyuan.apk",
-  "page": "https://github.com/liubanxian34/tgsaver-update/releases/tag/coex-v1",
-  "notes": "零号共存版首次加入「检查更新」功能。"
+  "version": "2.4.3",
+  "code": 113,
+  "tag": "coex-yiciyuan-2.4.3",
+  "apk": "https://github.com/liubanxian34/tgsaver-update/releases/download/coex-yiciyuan-2.4.3/zero-yiciyuan.apk",
+  "page": "https://github.com/liubanxian34/tgsaver-update/releases/tag/coex-yiciyuan-2.4.3",
+  "notes": "检查更新改为用 App 原有的入口，桌面只保留一个图标"
 }
