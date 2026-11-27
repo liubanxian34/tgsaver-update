@@ -1,6 +1,6 @@
 [
  {
-  "bookSourceComment": "ORG v37：搜索修好了——书名只取 h4（v36 取 a 的整段文本，作者和简介都粘在书名上），补上作者/封面/简介/分类；搜索词唯一命中被 302 到书页时把整页当一本书，不再空结果；年龄确认 cookie 补进 header 并每次搜索合并写回，COOKIE 过期后不会再搜出验证页",
+  "bookSourceComment": "ORG v37：搜索修好了——书名只取 h4（v36 取 a 的整段文本，作者和简介都粘在书名上），补作者/封面/简介/分类；搜索词唯一命中被 302 到书页时把整页当一本书，不再空结果；年龄确认 cookie 补进 header 并每次搜索合并写回；发现页三种结构（表格/排行/卡片）统一适配，书名用 a 的直接文本，不再带 /作者",
   "bookSourceGroup": "成人",
   "bookSourceName": "八叉书库ORG",
   "bookSourceType": 0,
@@ -32,13 +32,11 @@
    "replaceRegex": "##会员章节订阅|订阅本章节（?\\d*金币）?|确定订阅并阅读|若余额不足，请点击充值##"
   },
   "ruleExplore": {
-   "bookList": "@js:\nfunction S(x){var v=String(x);try{if(typeof java.lang!='undefined'&&java.lang.String)return new java.lang.String(v);}catch(a){}try{if(typeof Packages!='undefined'&&Packages.java&&Packages.java.lang&&Packages.java.lang.String)return new Packages.java.lang.String(v);}catch(b){}return v;}\nvar doc=org.jsoup.Jsoup.parse(S(result));\nvar r=doc.select('#jieqi_page_contents>div');\nif(r==null||r.size()==0)r=doc.select('div.blockcontent>div');\nif(r==null||r.size()==0)r=doc.select('a[href*=/book/]');\nr;",
-   "bookUrl": "@js:\nfunction S(x){var v=String(x);try{if(typeof java.lang!='undefined'&&java.lang.String)return new java.lang.String(v);}catch(a){}try{if(typeof Packages!='undefined'&&Packages.java&&Packages.java.lang&&Packages.java.lang.String)return new Packages.java.lang.String(v);}catch(b){}return v;}\nvar doc=org.jsoup.Jsoup.parse(S(result));\nvar a=doc.select('a[href*=/book/]').first();\nvar r=a?String(a.attr('href')||''):'';\nif(r&&!/^https?:/i.test(r)){\n  if(/^\\//.test(r)) r='https://bachashuku.org'+r;\n  else r='https://bachashuku.org/'+r;\n}\nr;",
-   "name": "h4@text",
-   "author": "@js:\nvar d=org.jsoup.Jsoup.parse(String(result));\nvar p=d.select('p.gray').first();\nvar a='';\nif(p){\n  var lk=p.select('a[href*=authorarticle]').first();\n  if(lk){ a=String(lk.text()); }\n  else { a=String(p.text()).replace(/\\|[\\s\\S]*$/,''); }\n}\na.replace(/^\\s+|\\s+$/g,'');\n",
-   "coverUrl": "@js:\nvar d=org.jsoup.Jsoup.parse(String(result));\nvar im=d.select('img.cover_m').first();\nif(!im) im=d.select('img.cover_l').first();\nim?String(im.attr('src')):'';\n",
-   "intro": "@js:\nvar d=org.jsoup.Jsoup.parse(String(result));\nvar i=d.select('#introa').first();\nvar t='';\nif(i){ t=String(i.text()); }\nelse{\n  var p=d.select('p.gray').first();\n  if(p){\n    var parts=String(p.html()).split(/<br\\s*\\/?>/i);\n    if(parts.length>1) t=org.jsoup.Jsoup.parse(parts[1]).text();\n  }\n}\nt.replace(/^\\s+|\\s+$/g,'');\n",
-   "kind": "@js:\nvar d=org.jsoup.Jsoup.parse(String(result));\nvar p=d.select('p.gray').first();\nvar t=p?String(p.text()):'';\nvar m=t.match(/#[^\\s#|]+/g);\nm?m.join(',').replace(/#/g,''):'';\n"
+   "bookList": "@js:\nvar doc=org.jsoup.Jsoup.parse(String(result));\nvar out=doc.select('#jieqi_page_contents tr');\nif(out.size()==0) out=doc.select('.ulnum li');\nif(out.size()==0) out=doc.select('#jieqi_page_contents div.c_row');\nif(out.size()==0) out=doc.select('a.db');\nout;\n",
+   "bookUrl": "a[href*=/book/]@href",
+   "name": "@js:\nvar d=org.jsoup.Jsoup.parse(String(result));\nvar a=d.select('a.db').first();\nif(!a) a=d.select('a[href*=/book/]').first();\nvar t=a?String(a.ownText()).replace(/^\\s+|\\s+$/g,''):'';\nif(!t){ var h=d.select('h4').first(); if(h) t=String(h.text()); }\nvar m=t.match(/《([^》]*)》/);\nvar nm=m?m[1]:t.replace(/^\\s+|\\s+$/g,'');\nnm;\n",
+   "author": "@js:\nvar d=org.jsoup.Jsoup.parse(String(result));\nvar sp=d.select('span.gray.fss').first();\nvar a=sp?String(sp.text()).replace(/^\\/\\s*/,''):'';\na.replace(/^\\s+|\\s+$/g,'');\n",
+   "coverUrl": "@js:\nvar d=org.jsoup.Jsoup.parse(String(result));\nvar im=d.select('img.cover_m').first();\nif(!im) im=d.select('img.cover_l').first();\nim?String(im.attr('src')):'';\n"
   },
   "ruleSearch": {
    "bookList": "@js:\nvar doc=org.jsoup.Jsoup.parse(String(result));\nvar out=doc.select('#jieqi_page_contents div.c_row');\nif(out.size()==0){\n  // 搜索词唯一命中时站点会 302 直接跳到书籍详情页，这里把整页当一本书，别返回空\n  if(doc.select('.row_textl').size()>0 || doc.select('#introa').size()>0){\n    out=doc.select('body');\n  }else if(/年龄确认/.test(String(result))){\n    java.toast('八叉：年龄确认失效（已重写 cookie），请再搜一次');\n  }\n}\nout;\n",
