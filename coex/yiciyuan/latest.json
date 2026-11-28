@@ -1,8 +1,8 @@
 {
-  "version": "2.5.1",
-  "code": 121,
-  "tag": "coex-yiciyuan-2.5.1",
-  "apk": "https://github.com/liubanxian34/tgsaver-update/releases/download/coex-yiciyuan-2.5.1/zero-yiciyuan.apk",
-  "page": "https://github.com/liubanxian34/tgsaver-update/releases/tag/coex-yiciyuan-2.5.1",
-  "notes": "1) 修好「内网传输」：之前点进去直接闪退（寄存器越界），发送/接收的判断也写反了，现在能正常等对方连、发/收备份包\n2) 修好「检查更新」：7 条镜像的判断写反，导致永远提示失败；现在会正常提示「已是最新版本」或弹更新框，失败时会带原因\n3) 侧边栏「同步运行日志」改成「下载日志」：日志存到 手机存储/Download/零号日志/，弹窗里那个按钮也一起改了，不再依赖内网/外网同步"
+  "version": "2.5.2",
+  "code": 122,
+  "tag": "coex-yiciyuan-2.5.2",
+  "apk": "https://github.com/liubanxian34/tgsaver-update/releases/download/coex-yiciyuan-2.5.2/zero-yiciyuan.apk",
+  "page": "https://github.com/liubanxian34/tgsaver-update/releases/tag/coex-yiciyuan-2.5.2",
+  "notes": "1) 内网传输重做：发送方不再需要先做备份，点「发送」直接选要带的内容（书架/历史/书源/下载任务、已下载漫画、阅读缓存），现打包再等对面来拿\n2) 接收方改成和阅读一样：两个输入框预先填好上次的 IP 和端口（默认 18770），可以改；收完自动解包并导入书架、书源、历史\n3) 侧边栏恢复「同步运行日志」（内网送到电脑，不通走外网），日志弹窗里那个按钮仍是「下载日志」\n4) 修掉备份包路径判断错误（之前找的是 /sdcard/YiCiYuan，实际在 下载/异次元 下），这也是「点了备份还是发不出去」的原因"
 }
