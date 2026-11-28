@@ -1,8 +1,8 @@
 {
-  "version": "2.4.6",
-  "code": 116,
-  "tag": "coex-yiciyuan-2.4.6",
-  "apk": "https://github.com/liubanxian34/tgsaver-update/releases/download/coex-yiciyuan-2.4.6/zero-yiciyuan.apk",
-  "page": "https://github.com/liubanxian34/tgsaver-update/releases/tag/coex-yiciyuan-2.4.6",
-  "notes": "检查更新改为优先国内镜像，修复一直提示失败；日志同步内网不通自动走外网"
+  "version": "2.5.0",
+  "code": 120,
+  "tag": "coex-yiciyuan-2.5.0",
+  "apk": "https://github.com/liubanxian34/tgsaver-update/releases/download/coex-yiciyuan-2.5.0/zero-yiciyuan.apk",
+  "page": "https://github.com/liubanxian34/tgsaver-update/releases/tag/coex-yiciyuan-2.5.0",
+  "notes": "侧边栏「意见反馈」改为「内网传输」（第一版）：发送/接收备份包，两台手机同 WiFi 直传"
 }
