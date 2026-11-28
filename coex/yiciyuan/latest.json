@@ -1,8 +1,8 @@
 {
-  "version": "2.6.1",
-  "code": 124,
-  "tag": "coex-yiciyuan-2.6.1",
-  "apk": "https://github.com/liubanxian34/tgsaver-update/releases/download/coex-yiciyuan-2.6.1/zero-yiciyuan.apk",
-  "page": "https://github.com/liubanxian34/tgsaver-update/releases/tag/coex-yiciyuan-2.6.1",
-  "notes": "对照 5 条问题整改：\n1. 书架长按/右上角操作面板重做：管理、换源、下载、移动、删除、清空、切换视图、新增书架，一行一个竖排，图标和原来一致、带原生点击背景和分隔线，可滚动；\n2. 检查更新改成应用内下载安装：点「更新」直接走系统下载器（通知栏有进度），下完自动弹安装界面，不再跳浏览器网页；已申请安装权限；\n3. 内网传输弹窗加了 4 段埋点日志（1/4 进入、3/4 搭建、4/4 显示、异常堆栈），下次闪退能定位到具体步骤；\n4. 导入缓存入口挂在备份页「本地备份」下方，和导入备份同屏，选 zip 后解到 下载/异次元 并恢复书架；\n5. 更新目录（更新规则与打开图源之间）、后台追读（打开图源下方，默认 3 章）保持上一版并在成品里确认存在。\n另外书架面板每次重建都会写一条 ZeroShelf 日志，方便确认是否生效。"
+  "version": "2.6.2",
+  "code": 125,
+  "tag": "coex-yiciyuan-2.6.2",
+  "apk": "https://github.com/liubanxian34/tgsaver-update/releases/download/coex-yiciyuan-2.6.2/zero-yiciyuan.apk",
+  "page": "https://github.com/liubanxian34/tgsaver-update/releases/tag/coex-yiciyuan-2.6.2",
+  "notes": "这一版重点是查清 2.6.1 装完闪退的原因：\n1. 启动时自动回溯上次崩溃：读系统 crash 日志（含 native 崩溃、进程被杀），写进运行日志，并另存一份到 手机存储/Download/零号日志/crash-last.txt，用文件管理器就能取；\n2. 清掉 apktool 的增量编译缓存，全量重打了一次，排除缓存污染；\n3. 书架操作面板去掉了一处跨类读取私有字段（会触发运行期 IllegalAccessError，导致面板静默不生效），标题改为固定文字；\n4. 更新下载改存到应用私有目录，避免公共目录写入被系统拒绝。\n如果这版还是装完就退，请把 Download/零号日志/crash-last.txt 发我，里面会有上次退出的真实堆栈。"
 }
