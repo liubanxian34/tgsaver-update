@@ -1,8 +1,8 @@
 {
-  "version": "2.6.0",
-  "code": 123,
-  "tag": "coex-yiciyuan-2.6.0",
-  "apk": "https://github.com/liubanxian34/tgsaver-update/releases/download/coex-yiciyuan-2.6.0/zero-yiciyuan.apk",
-  "page": "https://github.com/liubanxian34/tgsaver-update/releases/tag/coex-yiciyuan-2.6.0",
-  "notes": "新增四项（参考阅读已有功能实现）：\n1. 漫画阅读页菜单新增「更新目录」，位置在「更新规则」与「打开图源」之间，一键拉取该漫画最新目录并写回书架；\n2. 漫画阅读页菜单新增「后台追读」，位置在「打开图源」下方，可设置同时缓存几章（默认 3，范围 1-50），确认后自动把后面未下载的章节加进下载队列后台缓存；\n3. 书架长按菜单重做：原来的 6 个按钮 + 切换视图统一改成一行一个、从上往下排列，最下面新增「新增书架」，长按即可完成全部操作；\n4. 备份页「本地备份」下新增「导入缓存」，可以选择一个 zip 缓存包解压到 下载/异次元 并恢复书架，导入后书架直接展示书籍。\n同时修复：菜单项插入位置错乱（上一版部分条目会跑到菜单外）。"
+  "version": "2.6.1",
+  "code": 124,
+  "tag": "coex-yiciyuan-2.6.1",
+  "apk": "https://github.com/liubanxian34/tgsaver-update/releases/download/coex-yiciyuan-2.6.1/zero-yiciyuan.apk",
+  "page": "https://github.com/liubanxian34/tgsaver-update/releases/tag/coex-yiciyuan-2.6.1",
+  "notes": "对照 5 条问题整改：\n1. 书架长按/右上角操作面板重做：管理、换源、下载、移动、删除、清空、切换视图、新增书架，一行一个竖排，图标和原来一致、带原生点击背景和分隔线，可滚动；\n2. 检查更新改成应用内下载安装：点「更新」直接走系统下载器（通知栏有进度），下完自动弹安装界面，不再跳浏览器网页；已申请安装权限；\n3. 内网传输弹窗加了 4 段埋点日志（1/4 进入、3/4 搭建、4/4 显示、异常堆栈），下次闪退能定位到具体步骤；\n4. 导入缓存入口挂在备份页「本地备份」下方，和导入备份同屏，选 zip 后解到 下载/异次元 并恢复书架；\n5. 更新目录（更新规则与打开图源之间）、后台追读（打开图源下方，默认 3 章）保持上一版并在成品里确认存在。\n另外书架面板每次重建都会写一条 ZeroShelf 日志，方便确认是否生效。"
 }
