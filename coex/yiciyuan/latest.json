@@ -1,8 +1,8 @@
 {
-  "version": "2.5.2",
-  "code": 122,
-  "tag": "coex-yiciyuan-2.5.2",
-  "apk": "https://github.com/liubanxian34/tgsaver-update/releases/download/coex-yiciyuan-2.5.2/zero-yiciyuan.apk",
-  "page": "https://github.com/liubanxian34/tgsaver-update/releases/tag/coex-yiciyuan-2.5.2",
-  "notes": "1) 内网传输重做：发送方不再需要先做备份，点「发送」直接选要带的内容（书架/历史/书源/下载任务、已下载漫画、阅读缓存），现打包再等对面来拿\n2) 接收方改成和阅读一样：两个输入框预先填好上次的 IP 和端口（默认 18770），可以改；收完自动解包并导入书架、书源、历史\n3) 侧边栏恢复「同步运行日志」（内网送到电脑，不通走外网），日志弹窗里那个按钮仍是「下载日志」\n4) 修掉备份包路径判断错误（之前找的是 /sdcard/YiCiYuan，实际在 下载/异次元 下），这也是「点了备份还是发不出去」的原因"
+  "version": "2.6.0",
+  "code": 123,
+  "tag": "coex-yiciyuan-2.6.0",
+  "apk": "https://github.com/liubanxian34/tgsaver-update/releases/download/coex-yiciyuan-2.6.0/zero-yiciyuan.apk",
+  "page": "https://github.com/liubanxian34/tgsaver-update/releases/tag/coex-yiciyuan-2.6.0",
+  "notes": "新增四项（参考阅读已有功能实现）：\n1. 漫画阅读页菜单新增「更新目录」，位置在「更新规则」与「打开图源」之间，一键拉取该漫画最新目录并写回书架；\n2. 漫画阅读页菜单新增「后台追读」，位置在「打开图源」下方，可设置同时缓存几章（默认 3，范围 1-50），确认后自动把后面未下载的章节加进下载队列后台缓存；\n3. 书架长按菜单重做：原来的 6 个按钮 + 切换视图统一改成一行一个、从上往下排列，最下面新增「新增书架」，长按即可完成全部操作；\n4. 备份页「本地备份」下新增「导入缓存」，可以选择一个 zip 缓存包解压到 下载/异次元 并恢复书架，导入后书架直接展示书籍。\n同时修复：菜单项插入位置错乱（上一版部分条目会跑到菜单外）。"
 }
