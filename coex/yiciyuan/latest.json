@@ -1,8 +1,8 @@
 {
-  "version": "2.4.3",
-  "code": 113,
-  "tag": "coex-yiciyuan-2.4.3",
-  "apk": "https://github.com/liubanxian34/tgsaver-update/releases/download/coex-yiciyuan-2.4.3/zero-yiciyuan.apk",
-  "page": "https://github.com/liubanxian34/tgsaver-update/releases/tag/coex-yiciyuan-2.4.3",
-  "notes": "检查更新改为用 App 原有的入口，桌面只保留一个图标"
+  "version": "2.4.4",
+  "code": 114,
+  "tag": "coex-yiciyuan-2.4.4",
+  "apk": "https://github.com/liubanxian34/tgsaver-update/releases/download/coex-yiciyuan-2.4.4/zero-yiciyuan.apk",
+  "page": "https://github.com/liubanxian34/tgsaver-update/releases/tag/coex-yiciyuan-2.4.4",
+  "notes": "侧边栏：关于→运行日志，捐赠→同步运行日志，隐藏意见反馈；新增崩溃与页面日志，可一键同步到电脑"
 }
